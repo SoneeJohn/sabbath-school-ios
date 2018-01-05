@@ -33,8 +33,12 @@ class LanguageCellNode: ASCellNode {
 
         titleNode.attributedText = TextStyles.languageTitleStyle(string: title)
         subtitleNode.attributedText = TextStyles.languageSubtitleStyle(string: subtitle)
-        selectedNode.image = R.image.iconCheckmark()?.imageTintColor(.tintColor)
         automaticallyManagesSubnodes = true
+    }
+
+    override func didLoad() {
+        super.didLoad()
+        selectedNode.image = R.image.iconCheckmark()?.imageTintColor(.tintColor)
     }
 
     override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {

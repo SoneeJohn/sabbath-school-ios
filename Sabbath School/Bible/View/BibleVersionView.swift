@@ -33,8 +33,12 @@ class BibleVersionView: ASCellNode {
         self.isSelected = isSelected
 
         titleNode.attributedText = TextStyles.languageTitleStyle(string: title)
-        selectedNode.image = R.image.iconCheckmark()?.imageTintColor(.tintColor)
         automaticallyManagesSubnodes = true
+    }
+
+    override func didLoad() {
+        super.didLoad()
+        selectedNode.image = R.image.iconCheckmark()?.imageTintColor(.tintColor)
     }
 
     override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {

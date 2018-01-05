@@ -63,16 +63,12 @@ class ReadView: ASCellNode {
         self.highlights = highlights
         self.comments = comments
 
-        let theme = currentTheme()
-
         coverNode.url = lessonInfo.lesson.cover
         coverNode.placeholderEnabled = true
         coverNode.placeholderFadeDuration = 0.6
         coverNode.contentMode = .scaleAspectFill
-        coverNode.backgroundColor = theme.navBarColor
         coverNode.clipsToBounds = true
 
-        coverOverlayNode.backgroundColor = theme.navBarColor
         coverOverlayNode.alpha = 0
 
         coverTitleNode.alpha = 1
@@ -115,6 +111,10 @@ class ReadView: ASCellNode {
 
     override func didLoad() {
         super.didLoad()
+
+        let theme = currentTheme()
+        coverNode.backgroundColor = theme.navBarColor
+        coverOverlayNode.backgroundColor = theme.navBarColor
 
         initialCoverNodeHeight = coverNode.calculatedSize.height
 

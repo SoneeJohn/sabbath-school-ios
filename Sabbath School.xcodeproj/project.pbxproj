@@ -1715,7 +1715,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = XVGX5G4YQ9;
 				INFOPLIST_FILE = "Sabbath School/Application/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cryart.SabbathSchool;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1737,7 +1737,7 @@
 				CURRENT_PROJECT_VERSION = 2017.07.183;
 				DEVELOPMENT_TEAM = XVGX5G4YQ9;
 				INFOPLIST_FILE = "Sabbath School/Application/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cryart.SabbathSchool;
 				PRODUCT_NAME = "$(TARGET_NAME)";

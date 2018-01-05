@@ -70,7 +70,6 @@ class ReadOptionsView: ASDisplayNode {
         fontSizeView.thumbSize = CGSize(width: 20, height: 20)
         fontSizeView.thumbShadowOffset = CGSize(width: 0, height: 2)
         fontSizeView.thumbShadowRadius = 3
-        fontSizeView.thumbColor = .tintColor
 
         fontSizeView.backgroundColor = UIColor.clear
         fontSizeView.tintColor = .baseGray1
@@ -95,6 +94,11 @@ class ReadOptionsView: ASDisplayNode {
         addSubnode(fontSizeLargeNode)
         addSubnode(dividerNode1)
         addSubnode(dividerNode2)
+    }
+
+    override func didLoad() {
+        super.didLoad()
+        fontSizeView.thumbColor = .tintColor
     }
 
     override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {

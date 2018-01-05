@@ -77,10 +77,16 @@ extension UIColor {
     }
 
     class var tintColor: UIColor {
+        if #available(iOS 10.0, *) {
+            dispatchPrecondition(condition: .onQueue(.main))
+        } else {
+            // Fallback on earlier versions
+        }
         guard let appDelegate = UIApplication.shared.delegate,
             let window = appDelegate.window,
             let tintColor = window?.tintColor else { return UIColor.baseGreen }
         return tintColor
+//        return UIColor.baseGreen
     }
 
     class var readerWhite: UIColor {
